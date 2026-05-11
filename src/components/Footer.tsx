@@ -58,7 +58,7 @@ const SOCIAL = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: COLORS.brandDeep, color: 'rgba(255,255,255,0.6)', paddingTop: 64, paddingBottom: 32 }}>
+    <footer style={{ background: COLORS.brandDeep, color: 'rgba(255,255,255,0.80)', paddingTop: 64, paddingBottom: 32 }}>
       <div className="container">
         {/* CTA Strip */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24, paddingBottom: 56, marginBottom: 56, borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
@@ -66,7 +66,7 @@ export default function Footer() {
             <h3 style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: 800, fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', color: '#fff', marginBottom: 6, lineHeight: 1.25 }}>
               Ready to give your child a head start in tech?
             </h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 14, margin: 0 }}>
+            <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: 14, margin: 0 }}>
               Free demo class — no commitment, no pressure.
             </p>
           </div>
@@ -87,7 +87,7 @@ export default function Footer() {
                 {SITE.name}
               </span>
             </div>
-            <p style={{ fontSize: 14, lineHeight: 1.7, color: 'rgba(255,255,255,0.65)', marginBottom: 24, maxWidth: 220 }}>
+            <p style={{ fontSize: 14, lineHeight: 1.7, color: 'rgba(255,255,255,0.82)', marginBottom: 24, maxWidth: 220 }}>
               {SITE.tagline}
             </p>
             {/* Social icons */}
@@ -107,7 +107,7 @@ export default function Footer() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: 'rgba(255,255,255,0.5)',
+                    color: 'rgba(255,255,255,0.68)',
                     textDecoration: 'none',
                     transition: 'all 0.2s',
                   }}
@@ -140,9 +140,9 @@ export default function Footer() {
                     {link.to.startsWith('/') ? (
                       <Link
                         to={link.to}
-                        style={{ color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontSize: 14, fontWeight: 600, transition: 'color 0.2s' }}
+                        style={{ color: 'rgba(255,255,255,0.82)', textDecoration: 'none', fontSize: 14, fontWeight: 600, transition: 'color 0.2s' }}
                         onMouseOver={e => (e.currentTarget.style.color = '#4ade80')}
-                        onMouseOut={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
+                        onMouseOut={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.82)')}
                       >
                         {link.label}
                       </Link>
@@ -151,9 +151,9 @@ export default function Footer() {
                         href={link.to}
                         target={link.to.startsWith('https') ? '_blank' : undefined}
                         rel="noopener noreferrer"
-                        style={{ color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontSize: 14, fontWeight: 600, transition: 'color 0.2s' }}
+                        style={{ color: 'rgba(255,255,255,0.82)', textDecoration: 'none', fontSize: 14, fontWeight: 600, transition: 'color 0.2s' }}
                         onMouseOver={e => (e.currentTarget.style.color = '#4ade80')}
-                        onMouseOut={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
+                        onMouseOut={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.82)')}
                       >
                         {link.label}
                       </a>
@@ -167,7 +167,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 24, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
-          <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', margin: 0 }}>
+          <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', margin: 0 }}>
             © {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </p>
           <div style={{ display: 'flex', gap: 20 }}>
@@ -175,7 +175,7 @@ export default function Footer() {
               <a
                 key={l}
                 href="#"
-                style={{ color: 'rgba(255,255,255,0.35)', fontSize: 13, textDecoration: 'none' }}
+                style={{ color: 'rgba(255,255,255,0.55)', fontSize: 13, textDecoration: 'none' }}
                 onMouseOver={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
                 onMouseOut={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.35)')}
               >

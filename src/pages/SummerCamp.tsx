@@ -61,7 +61,7 @@ export default function SummerCamp() {
                 WhatsApp a Question
               </a>
             </div>
-            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, marginTop: 14 }}>
+            <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: 13, marginTop: 14 }}>
               Early-bird discount: <strong style={{ color: '#4ade80' }}>{CAMP.earlyBirdPrice}</strong> for registrations before {CAMP.earlyBirdDeadline}
             </p>
           </motion.div>
@@ -106,7 +106,7 @@ export default function SummerCamp() {
             <motion.div {...fade()}>
               <span className="pill" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', marginBottom: 20, display: 'inline-flex' }}>Daily Schedule</span>
               <h2 className="display-md" style={{ color: '#fff', marginBottom: 16 }}>A Typical Camp Day</h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, marginBottom: 28 }}>
+              <p style={{ color: 'rgba(255,255,255,0.88)', lineHeight: 1.8, marginBottom: 28 }}>
                 Every day is structured but flexible. Mornings are focused, afternoons are collaborative. Children never have idle time — but they never feel rushed either.
               </p>
               <div className="glass" style={{ padding: '20px 24px' }}>
@@ -257,7 +257,7 @@ export default function SummerCamp() {
               <Link to="/contact" className="btn btn-white btn-lg">Register Now — {CAMP.price}</Link>
               <a href="https://wa.me/2348000000000" target="_blank" rel="noopener noreferrer" className="btn btn-ghost btn-lg">Ask a Question</a>
             </div>
-            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, marginTop: 18 }}>
+            <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: 13, marginTop: 18 }}>
               Early-bird price: <strong style={{ color: '#4ade80' }}>{CAMP.earlyBirdPrice}</strong> before {CAMP.earlyBirdDeadline}
             </p>
           </motion.div>

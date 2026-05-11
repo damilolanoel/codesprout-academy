@@ -152,7 +152,7 @@ function ComparisonTable() {
         <motion.div {...fade()} style={{ textAlign: 'center', marginBottom: 48 }}>
           <span className="pill" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', marginBottom: 16, display: 'inline-flex' }}>Compare</span>
           <h2 className="display-md" style={{ color: '#fff' }}>Programme Comparison</h2>
-          <p style={{ color: 'rgba(255,255,255,0.6)', marginTop: 12 }}>See how the three tracks stack up side by side.</p>
+          <p style={{ color: 'rgba(255,255,255,0.85)', marginTop: 12 }}>See how the three tracks stack up side by side.</p>
         </motion.div>
 
         <div style={{ overflowX: 'auto' }}>
@@ -164,7 +164,7 @@ function ComparisonTable() {
                   <th key={p.id} style={{ padding: '18px 22px', textAlign: 'center', color: '#fff', fontFamily: 'Space Grotesk, sans-serif', fontWeight: 700, fontSize: 13 }}>
                     <span style={{ marginRight: 6 }}>{p.emoji}</span>
                     {p.name.replace('CodeSprout ', '')}
-                    <div style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.65)', marginTop: 2 }}>Ages {p.ageRange}</div>
+                    <div style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.82)', marginTop: 2 }}>Ages {p.ageRange}</div>
                   </th>
                 ))}
               </tr>

@@ -36,7 +36,7 @@ export default function About() {
               {[['450+', 'Students Taught'], ['3', 'Programmes'], ['98%', 'Parent Satisfaction']].map(([val, lbl]) => (
                 <div key={lbl} style={{ textAlign: 'center' }}>
                   <div style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: 900, fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', color: '#4ade80', lineHeight: 1 }}>{val}</div>
-                  <div style={{ color: 'rgba(255,255,255,0.65)', fontSize: 13, fontWeight: 600, marginTop: 4 }}>{lbl}</div>
+                  <div style={{ color: 'rgba(255,255,255,0.82)', fontSize: 13, fontWeight: 600, marginTop: 4 }}>{lbl}</div>
                 </div>
               ))}
             </div>
@@ -93,7 +93,7 @@ export default function About() {
           <motion.div {...fade()} style={{ textAlign: 'center', marginBottom: 56 }}>
             <div className="section-label" style={{ justifyContent: 'center', color: '#4ade80' }}>Purpose</div>
             <h2 className="display-md" style={{ color: '#fff', marginBottom: 12 }}>Mission & Vision</h2>
-            <p style={{ color: 'rgba(255,255,255,0.6)', maxWidth: 440, margin: '0 auto', lineHeight: 1.75 }}>
+            <p style={{ color: 'rgba(255,255,255,0.85)', maxWidth: 440, margin: '0 auto', lineHeight: 1.75 }}>
               What we're building and why it matters for Nigeria's digital future.
             </p>
           </motion.div>
@@ -113,7 +113,7 @@ export default function About() {
                   {item.icon}
                 </div>
                 <h3 style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: 800, fontSize: 20, color: item.color, marginBottom: 14 }}>{item.label}</h3>
-                <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: 15, lineHeight: 1.88 }}>{item.text}</p>
+                <p style={{ color: 'rgba(255,255,255,0.90)', fontSize: 15, lineHeight: 1.88 }}>{item.text}</p>
               </motion.div>
             ))}
           </div>
@@ -164,7 +164,7 @@ export default function About() {
           <motion.div {...fade()} style={{ textAlign: 'center', marginBottom: 56 }}>
             <div className="section-label" style={{ justifyContent: 'center', color: '#4ade80' }}>The Team</div>
             <h2 className="display-md" style={{ color: '#fff', marginBottom: 12 }}>Meet the People Behind CodeSprout</h2>
-            <p style={{ color: 'rgba(255,255,255,0.6)', maxWidth: 480, margin: '0 auto', lineHeight: 1.75 }}>
+            <p style={{ color: 'rgba(255,255,255,0.85)', maxWidth: 480, margin: '0 auto', lineHeight: 1.75 }}>
               Educators and engineers who are genuinely passionate about how children learn.
             </p>
           </motion.div>
@@ -185,7 +185,7 @@ export default function About() {
                   </div>
                 </div>
                 <div style={{ padding: '22px 24px 28px' }}>
-                  <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 13, lineHeight: 1.8, margin: 0 }}>{member.bio}</p>
+                  <p style={{ color: 'rgba(255,255,255,0.88)', fontSize: 13, lineHeight: 1.8, margin: 0 }}>{member.bio}</p>
                 </div>
               </motion.div>
             ))}

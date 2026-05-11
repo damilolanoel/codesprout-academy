@@ -108,7 +108,7 @@ function MarqueeBanner() {
     <div style={{ background: '#071a12', borderBottom: '1px solid rgba(29,158,117,0.18)', overflow: 'hidden', padding: '12px 0', userSelect: 'none' }}>
       <div style={{ display: 'flex', width: 'max-content', animation: 'marquee 36s linear infinite' }}>
         {doubled.map((item, i) => (
-          <span key={i} style={{ whiteSpace: 'nowrap', padding: '0 24px', fontSize: 12, fontWeight: 700, fontFamily: 'Nunito, sans-serif', display: 'inline-flex', alignItems: 'center', gap: 0, color: item.startsWith('◆') ? 'rgba(255,255,255,0.52)' : 'rgba(255,255,255,0.88)' }}>
+          <span key={i} style={{ whiteSpace: 'nowrap', padding: '0 24px', fontSize: 12, fontWeight: 700, fontFamily: 'Nunito, sans-serif', display: 'inline-flex', alignItems: 'center', gap: 0, color: item.startsWith('◆') ? 'rgba(255,255,255,0.68)' : 'rgba(255,255,255,0.92)' }}>
             {item.startsWith('◆') ? <><span style={{ color: '#1D9E75', marginRight: 7, fontSize: 8 }}>◆</span>{item.slice(2)}</> : item}
           </span>
         ))}
@@ -167,7 +167,7 @@ function HeroSection() {
                   <div style={{ fontSize: 'clamp(1.7rem, 3.5vw, 2.1rem)', fontWeight: 900, color: '#fff', fontFamily: 'Space Grotesk, sans-serif', lineHeight: 1, marginBottom: 5 }}>
                     <Counter target={s.value} suffix={s.suffix} />
                   </div>
-                  <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.55)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1 }}>{s.label}</div>
+                  <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.72)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1 }}>{s.label}</div>
                 </div>
               ))}
             </div>
@@ -317,7 +317,7 @@ function CampBanner() {
             <p style={{ color: '#4ade80', fontWeight: 800, fontSize: 18, marginBottom: 6 }}>
               📅 {CAMP.displayRange}
             </p>
-            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 14, marginBottom: 24 }}>{CAMP.schedule}</p>
+            <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 14, marginBottom: 24 }}>{CAMP.schedule}</p>
             <p style={{ color: 'rgba(255,255,255,0.82)', maxWidth: 460, lineHeight: 1.85, marginBottom: 36, fontSize: 16 }}>
               A full month of coding, building, and creating. Small classes, daily sessions, and a showcase on the final day — all for one flat fee.
             </p>
@@ -325,7 +325,7 @@ function CampBanner() {
               <Link to="/contact" className="btn btn-white btn-lg">Register Now — {CAMP.price}</Link>
               <Link to="/summer-camp" className="btn btn-ghost btn-lg">See Full Details</Link>
             </div>
-            <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 13, marginTop: 16 }}>
+            <p style={{ color: 'rgba(255,255,255,0.68)', fontSize: 13, marginTop: 16 }}>
               Early-bird: {CAMP.earlyBirdPrice} · Register before {CAMP.earlyBirdDeadline}
             </p>
           </motion.div>
@@ -333,7 +333,7 @@ function CampBanner() {
           {/* Right: countdown card */}
           <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}>
             <div className="glass" style={{ padding: '36px 32px', textAlign: 'center' }}>
-              <div style={{ fontSize: 11, fontWeight: 800, color: 'rgba(255,255,255,0.6)', letterSpacing: 1.4, textTransform: 'uppercase', marginBottom: 8 }}>
+              <div style={{ fontSize: 11, fontWeight: 800, color: 'rgba(255,255,255,0.78)', letterSpacing: 1.4, textTransform: 'uppercase', marginBottom: 8 }}>
                 Camp Starts In
               </div>
               <CountdownTimer />
@@ -532,7 +532,7 @@ function TestimonialsSection() {
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: 'center', marginBottom: 56 }}>
           <div className="section-label" style={{ justifyContent: 'center', color: '#4ade80' }}>Reviews</div>
           <h2 className="display-lg" style={{ color: '#fff', marginBottom: 16 }}>What Families Are Saying</h2>
-          <p style={{ color: 'rgba(255,255,255,0.65)', maxWidth: 450, margin: '0 auto', lineHeight: 1.85, fontSize: 16 }}>
+          <p style={{ color: 'rgba(255,255,255,0.85)', maxWidth: 450, margin: '0 auto', lineHeight: 1.85, fontSize: 16 }}>
             Real stories from Lagos parents and students who've been through our programmes.
           </p>
         </motion.div>
@@ -580,7 +580,7 @@ function FinalCTA() {
           <h2 className="display-lg" style={{ color: '#fff', marginBottom: 18 }}>
             Ready to Give Your Child<br />a Head Start?
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.88, marginBottom: 44, fontSize: 17, maxWidth: 500, margin: '0 auto 44px' }}>
+          <p style={{ color: 'rgba(255,255,255,0.88)', lineHeight: 1.88, marginBottom: 44, fontSize: 17, maxWidth: 500, margin: '0 auto 44px' }}>
             Join 450+ Lagos families who've chosen CodeSprout Academy. Register today and we'll get back to you within 24 hours.
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 48 }}>
@@ -596,7 +596,7 @@ function FinalCTA() {
           {/* Trust badges */}
           <div style={{ display: 'flex', gap: 24, justifyContent: 'center', flexWrap: 'wrap' }}>
             {['✓ Free demo class', '✓ No commitment', '✓ 24hr response', '✓ 450+ families trust us'].map(t => (
-              <span key={t} style={{ fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.5)' }}>{t}</span>
+              <span key={t} style={{ fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.72)' }}>{t}</span>
             ))}
           </div>
         </motion.div>

@@ -30,7 +30,7 @@ export const COLORS = {
   brandBg: '#f0faf5',
   juniors: '#1D9E75',
   builders: '#2563EB',
-  innovators: '#D97706',
+  innovators: '#b45309',
 };
 
 // ─── Navigation ─────────────────────────────────────────────────────────────
