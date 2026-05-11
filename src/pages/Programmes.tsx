@@ -45,10 +45,15 @@ function PageHero() {
 
 function ProgrammeDetail({ programme: p, index }: { programme: typeof PROGRAMMES[0]; index: number }) {
   const reverse = index % 2 === 1;
-  const sectionBg = index === 0 ? '#fff' : index === 1 ? '#f8fdfa' : '#fff';
+  const sectionBgs = [
+    'linear-gradient(160deg, #f5fbf8 0%, #fff 60%)',
+    'linear-gradient(160deg, #eff6ff 0%, #f8fdfa 60%)',
+    'linear-gradient(160deg, #fffbeb 0%, #fff 60%)',
+  ];
+  const sectionBg = sectionBgs[index] ?? '#fff';
 
   return (
-    <section id={p.id} style={{ background: sectionBg, position: 'relative', overflow: 'hidden' }}>
+    <section id={p.id} className="dot-pattern-green" style={{ background: sectionBg, position: 'relative', overflow: 'hidden' }}>
       {/* Full-width coloured programme header band */}
       <div style={{ background: `linear-gradient(135deg, ${p.color}20, ${p.color}0c)`, borderTop: `4px solid ${p.color}`, borderBottom: `1px solid ${p.color}18`, padding: '22px 24px' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' as const }}>

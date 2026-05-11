@@ -45,7 +45,7 @@ export default function About() {
       </section>
 
       {/* ── Our Story ── */}
-      <section style={{ background: '#fff' }}>
+      <section className="dot-pattern-green" style={{ background: 'linear-gradient(160deg, #f5fbf8 0%, #fff 60%, #f0f4ff 100%)' }}>
         <div className="section">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 64, alignItems: 'center' }}>
             <motion.div {...fade()}>

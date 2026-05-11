@@ -142,7 +142,7 @@ export default function SummerCamp() {
       </section>
 
       {/* ── Who is it for? ── */}
-      <section style={{ background: '#fff' }}>
+      <section className="dot-pattern-green" style={{ background: 'linear-gradient(160deg, #f5fbf8 0%, #fff 50%, #f0f4ff 100%)' }}>
         <div className="section">
           <motion.div {...fade()} style={{ textAlign: 'center', marginBottom: 52 }}>
             <span className="pill" style={{ marginBottom: 16, display: 'inline-flex' }}>Who It's For</span>
@@ -226,12 +226,14 @@ export default function SummerCamp() {
       </section>
 
       {/* ── Testimonials ── */}
-      <section style={{ background: '#fff' }}>
-        <div className="section">
-          <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <span className="pill" style={{ marginBottom: 16, display: 'inline-flex' }}>Testimonials</span>
-            <h2 className="display-md" style={{ color: '#0f1a14', marginBottom: 12 }}>What Previous Campers Say</h2>
-          </div>
+      <section className="dark-gradient dot-pattern" style={{ position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: '10%', left: '5%', width: 360, height: 360, background: 'radial-gradient(circle, rgba(29,158,117,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', bottom: '5%', right: '5%', width: 300, height: 300, background: 'radial-gradient(circle, rgba(37,99,235,0.10) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div className="section" style={{ position: 'relative' }}>
+          <motion.div {...fade()} style={{ textAlign: 'center', marginBottom: 48 }}>
+            <span className="pill" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', marginBottom: 16, display: 'inline-flex' }}>Testimonials</span>
+            <h2 className="display-md" style={{ color: '#fff', marginBottom: 12 }}>What Previous Campers Say</h2>
+          </motion.div>
           <Testimonials />
         </div>
       </section>
