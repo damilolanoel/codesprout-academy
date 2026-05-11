@@ -8,7 +8,7 @@ import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
 export default function App() {
-  const base = import.meta.env.BASE_URL;
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
   return (
     <BrowserRouter basename={base}>
       <Routes>
