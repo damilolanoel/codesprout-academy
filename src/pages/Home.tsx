@@ -8,6 +8,24 @@ import FAQAccordion from '../components/FAQAccordion';
 
 const G = COLORS.brand;
 
+const PROG_FEATURES: Record<string, string[]> = {
+  juniors:    ['Visual block coding (Scratch)', 'Games, stories & animations', 'Computational thinking skills', 'Final project showcase'],
+  builders:   ['HTML & CSS from scratch', 'Live published personal website', 'Hands-on robotics module', 'Responsive design basics'],
+  innovators: ['JavaScript & real APIs', 'No-code tools for speed', 'Deploy a live application', 'Product design & UX thinking'],
+};
+
+const MARQUEE_ITEMS = [
+  '🌱 Lagos\'s #1 Kids Coding Academy',
+  '◆ Ages 7–17',
+  '◆ 450+ Students Taught',
+  '◆ Max 15 Per Class',
+  '◆ Summer Camp 2026: Aug 4–29',
+  '◆ Free Demo Class Available',
+  '◆ Victoria Island · Lagos',
+  '◆ Real Projects Every Term',
+  '◆ 98% Parent Satisfaction',
+];
+
 // ─── Animated counter ─────────────────────────────────────────────────────────
 function Counter({ target, suffix }: { target: number; suffix: string }) {
   const [val, setVal] = useState(0);
@@ -79,6 +97,22 @@ function CodeIllustration() {
         style={{ position: 'absolute', top: '42%', right: -32, background: `linear-gradient(135deg, ${G}, #0f6e56)`, borderRadius: 14, padding: '9px 16px', boxShadow: '0 8px 28px rgba(29,158,117,0.45)', display: 'flex', alignItems: 'center', gap: 7, fontSize: 12, fontWeight: 800, color: '#fff' }}>
         ✓ 15 Students Max
       </motion.div>
+    </div>
+  );
+}
+
+// ─── Marquee banner ────────────────────────────────────────────────────────────
+function MarqueeBanner() {
+  const doubled = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
+  return (
+    <div style={{ background: '#071a12', borderBottom: '1px solid rgba(29,158,117,0.18)', overflow: 'hidden', padding: '12px 0', userSelect: 'none' }}>
+      <div style={{ display: 'flex', width: 'max-content', animation: 'marquee 36s linear infinite' }}>
+        {doubled.map((item, i) => (
+          <span key={i} style={{ whiteSpace: 'nowrap', padding: '0 24px', fontSize: 12, fontWeight: 700, fontFamily: 'Nunito, sans-serif', display: 'inline-flex', alignItems: 'center', gap: 0, color: item.startsWith('◆') ? 'rgba(255,255,255,0.52)' : 'rgba(255,255,255,0.88)' }}>
+            {item.startsWith('◆') ? <><span style={{ color: '#1D9E75', marginRight: 7, fontSize: 8 }}>◆</span>{item.slice(2)}</> : item}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
@@ -170,7 +204,7 @@ function WhySection() {
                 <div style={{ width: 58, height: 58, background: 'linear-gradient(135deg, #e4f9f0, #c8f0e0)', borderRadius: 18, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28 }}>
                   {c.icon}
                 </div>
-                <span style={{ fontSize: 52, fontWeight: 900, color: '#f0fdf8', fontFamily: 'Space Grotesk, sans-serif', lineHeight: 1, userSelect: 'none' }}>
+                <span style={{ fontSize: 52, fontWeight: 900, color: 'rgba(29,158,117,0.10)', fontFamily: 'Space Grotesk, sans-serif', lineHeight: 1, userSelect: 'none' }}>
                   {nums[i]}
                 </span>
               </div>
@@ -205,6 +239,12 @@ function ProgrammesSection() {
               style={{ borderRadius: 22, overflow: 'hidden', background: '#fff', border: '1px solid rgba(29,158,117,0.13)', boxShadow: '0 2px 12px rgba(29,158,117,0.07), 0 12px 36px rgba(29,158,117,0.05)', transition: 'transform 0.28s cubic-bezier(0.22,0.61,0.36,1), box-shadow 0.28s' }}
               onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-7px)'; (e.currentTarget as HTMLDivElement).style.boxShadow = '0 4px 16px rgba(29,158,117,0.10), 0 24px 56px rgba(29,158,117,0.12)'; }}
               onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = 'none'; (e.currentTarget as HTMLDivElement).style.boxShadow = '0 2px 12px rgba(29,158,117,0.07), 0 12px 36px rgba(29,158,117,0.05)'; }}>
+              {/* Most Popular badge for Builders */}
+              {i === 1 && (
+                <div style={{ background: `linear-gradient(90deg, ${p.color}, #1d4ed8)`, padding: '7px 20px', textAlign: 'center', fontSize: 11, fontWeight: 900, color: '#fff', letterSpacing: 0.9, textTransform: 'uppercase' as const, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7 }}>
+                  <span>⭐</span> Most Popular Choice
+                </div>
+              )}
               {/* Coloured header strip */}
               <div style={{ background: `linear-gradient(135deg, ${p.color}22, ${p.color}0c)`, padding: '26px 28px 22px', borderBottom: `1px solid ${p.color}20` }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
@@ -225,9 +265,14 @@ function ProgrammesSection() {
                     <span key={tag} style={{ background: '#f2f8f5', color: '#3a6652', fontSize: 12, padding: '5px 14px', borderRadius: 100, fontWeight: 700 }}>{tag}</span>
                   ))}
                 </div>
-                <p style={{ color: '#5a7266', fontSize: 14, lineHeight: 1.78, marginBottom: 24 }}>
-                  {p.overview.slice(0, 130)}…
-                </p>
+                <ul style={{ margin: '0 0 20px', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  {PROG_FEATURES[p.id].map(f => (
+                    <li key={f} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13, color: '#3a6652' }}>
+                      <span style={{ width: 18, height: 18, borderRadius: '50%', background: `${p.color}1a`, color: p.color, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 9, fontWeight: 900, flexShrink: 0 }}>✓</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 20, borderTop: '1px solid #f0f0f0' }}>
                   <div>
                     <span style={{ fontWeight: 900, color: p.color, fontSize: 22, fontFamily: 'Space Grotesk' }}>{p.price}</span>
@@ -560,6 +605,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <MarqueeBanner />
       <WhySection />
       <ProgrammesSection />
       <CampBanner />
