@@ -8,8 +8,9 @@ import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
 export default function App() {
+  const base = import.meta.env.BASE_URL;
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={base}>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
