@@ -69,7 +69,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Info Cards */}
-      <section style={{ background: '#f0faf5', padding: '60px 24px' }}>
+      <section style={{ background: '#0b2018', padding: '60px 24px' }}>
         <div className="container">
           <div
             style={{
@@ -110,19 +110,19 @@ export default function Contact() {
       </section>
 
       {/* Registration Form */}
-      <section id="register" style={{ padding: '80px 24px', background: '#fff' }}>
+      <section id="register" style={{ padding: '80px 24px', background: '#0b2018' }}>
         <div className="container">
           <motion.div {...fade()} style={{ textAlign: 'center', marginBottom: 52 }}>
             <span className="pill" style={{ marginBottom: 16 }}>Registration</span>
-            <h2 className="display-md" style={{ marginBottom: 12 }}>
+            <h2 className="display-md" style={{ marginBottom: 12, color: '#fff' }}>
               Register Your Child
             </h2>
-            <p style={{ color: '#555', fontSize: 17, maxWidth: 520, margin: '0 auto', lineHeight: 1.7 }}>
+            <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 17, maxWidth: 520, margin: '0 auto', lineHeight: 1.7 }}>
               Complete the form and we'll confirm your child's spot and call within 24 hours. A free demo class is included.
             </p>
           </motion.div>
 
-          <motion.div {...fade(0.1)}>
+          <motion.div {...fade(0.1)} className="card" style={{ maxWidth: 700, margin: '0 auto', padding: '40px 36px' }}>
             <ContactForm />
           </motion.div>
         </div>
@@ -182,14 +182,14 @@ export default function Contact() {
       </section>
 
       {/* FAQ */}
-      <section style={{ padding: '80px 24px', background: '#f0faf5' }}>
+      <section style={{ padding: '80px 24px', background: '#0b2018' }}>
         <div className="container" style={{ maxWidth: 760 }}>
           <motion.div {...fade()} style={{ textAlign: 'center', marginBottom: 52 }}>
             <span className="pill" style={{ marginBottom: 16 }}>Questions</span>
-            <h2 className="display-md" style={{ marginBottom: 12 }}>
+            <h2 className="display-md" style={{ marginBottom: 12, color: '#fff' }}>
               Frequently Asked Questions
             </h2>
-            <p style={{ color: '#555', fontSize: 16, maxWidth: 480, margin: '0 auto' }}>
+            <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, maxWidth: 480, margin: '0 auto' }}>
               Can't find an answer? Call us or send a WhatsApp — we reply fast.
             </p>
           </motion.div>
@@ -198,13 +198,13 @@ export default function Contact() {
       </section>
 
       {/* WhatsApp CTA */}
-      <section style={{ padding: '72px 24px', background: '#fff', textAlign: 'center' }}>
+      <section style={{ padding: '72px 24px', background: '#071a12', textAlign: 'center' }}>
         <motion.div {...fade()} style={{ maxWidth: 560, margin: '0 auto' }}>
           <div style={{ fontSize: 48, marginBottom: 16 }}>💬</div>
-          <h3 className="display-md" style={{ marginBottom: 12 }}>
+          <h3 className="display-md" style={{ marginBottom: 12, color: '#fff' }}>
             Prefer WhatsApp?
           </h3>
-          <p style={{ color: '#555', fontSize: 16, marginBottom: 28, lineHeight: 1.7 }}>
+          <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, marginBottom: 28, lineHeight: 1.7 }}>
             Message us on WhatsApp and we'll respond within the hour during office hours.
           </p>
           <a

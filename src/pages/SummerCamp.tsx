@@ -69,12 +69,12 @@ export default function SummerCamp() {
       </section>
 
       {/* ── What's Included ── */}
-      <section className="dot-pattern-green" style={{ background: 'linear-gradient(180deg, #fff 0%, #f0fdf8 100%)' }}>
+      <section className="dot-pattern-green" style={{ background: '#0b2018' }}>
         <div className="section">
           <motion.div {...fade()} style={{ textAlign: 'center', marginBottom: 56 }}>
             <span className="pill" style={{ marginBottom: 16, display: 'inline-flex' }}>What You Get</span>
-            <h2 className="display-md" style={{ color: '#0f1a14', marginBottom: 12 }}>Everything Included</h2>
-            <p style={{ color: '#555', maxWidth: 440, margin: '0 auto', lineHeight: 1.75 }}>
+            <h2 className="display-md" style={{ color: '#fff', marginBottom: 12 }}>Everything Included</h2>
+            <p style={{ color: 'rgba(255,255,255,0.82)', maxWidth: 440, margin: '0 auto', lineHeight: 1.75 }}>
               One flat fee covers everything. No hidden costs, no extra materials to buy.
             </p>
           </motion.div>
@@ -142,12 +142,12 @@ export default function SummerCamp() {
       </section>
 
       {/* ── Who is it for? ── */}
-      <section style={{ background: '#fff' }}>
+      <section style={{ background: '#0b2018' }}>
         <div className="section">
           <motion.div {...fade()} style={{ textAlign: 'center', marginBottom: 52 }}>
             <span className="pill" style={{ marginBottom: 16, display: 'inline-flex' }}>Who It's For</span>
-            <h2 className="display-md" style={{ color: '#0f1a14', marginBottom: 12 }}>Open to Ages 7–17</h2>
-            <p style={{ color: '#555', maxWidth: 480, margin: '0 auto', lineHeight: 1.75 }}>
+            <h2 className="display-md" style={{ color: '#fff', marginBottom: 12 }}>Open to Ages 7–17</h2>
+            <p style={{ color: 'rgba(255,255,255,0.82)', maxWidth: 480, margin: '0 auto', lineHeight: 1.75 }}>
               Summer Camp groups are formed based on age and experience. Every child is placed in the right environment for them.
             </p>
           </motion.div>
@@ -179,11 +179,11 @@ export default function SummerCamp() {
       </section>
 
       {/* ── Pricing ── */}
-      <section className="dot-pattern-green" style={{ background: '#f0fdf8', padding: '88px 24px' }}>
+      <section className="dot-pattern-green" style={{ background: '#071a12', padding: '88px 24px' }}>
         <div className="container">
           <motion.div {...fade()} style={{ textAlign: 'center', marginBottom: 48 }}>
             <span className="pill" style={{ marginBottom: 16, display: 'inline-flex' }}>Pricing</span>
-            <h2 className="display-md" style={{ color: '#0f1a14' }}>Simple, Transparent Pricing</h2>
+            <h2 className="display-md" style={{ color: '#fff' }}>Simple, Transparent Pricing</h2>
           </motion.div>
 
           <div style={{ maxWidth: 500, margin: '0 auto' }}>

@@ -227,12 +227,12 @@ function WhySection() {
 // ─── Programmes preview ────────────────────────────────────────────────────────
 function ProgrammesSection() {
   return (
-    <section style={{ background: '#f5fbf8' }} className="dot-pattern-green">
+    <section style={{ background: '#0b2018' }} className="dot-pattern-green">
       <div className="section">
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: 'center', marginBottom: 68 }}>
           <div className="section-label">Curriculum</div>
-          <h2 className="display-lg" style={{ color: '#071a12', marginBottom: 16 }}>Our Programmes</h2>
-          <p style={{ color: '#5a7266', maxWidth: 490, margin: '0 auto', lineHeight: 1.85, fontSize: 16 }}>
+          <h2 className="display-lg" style={{ color: '#fff', marginBottom: 16 }}>Our Programmes</h2>
+          <p style={{ color: 'rgba(255,255,255,0.82)', maxWidth: 490, margin: '0 auto', lineHeight: 1.85, fontSize: 16 }}>
             Three age-matched tracks designed to take kids from curious beginners to confident builders.
           </p>
         </motion.div>
@@ -363,12 +363,12 @@ function CampBanner() {
 // ─── How It Works ──────────────────────────────────────────────────────────────
 function HowItWorksSection() {
   return (
-    <section style={{ background: 'linear-gradient(180deg, #fff 0%, #f0fdf8 100%)' }} className="dot-pattern-green">
+    <section style={{ background: '#0b2018' }} className="dot-pattern-green">
       <div className="section">
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: 'center', marginBottom: 68 }}>
           <div className="section-label">Process</div>
-          <h2 className="display-lg" style={{ color: '#071a12', marginBottom: 16 }}>How It Works</h2>
-          <p style={{ color: '#5a7266', maxWidth: 440, margin: '0 auto', lineHeight: 1.85, fontSize: 16 }}>
+          <h2 className="display-lg" style={{ color: '#fff', marginBottom: 16 }}>How It Works</h2>
+          <p style={{ color: 'rgba(255,255,255,0.82)', maxWidth: 440, margin: '0 auto', lineHeight: 1.85, fontSize: 16 }}>
             From first inquiry to graduation day — here's your child's journey with us.
           </p>
         </motion.div>
@@ -381,12 +381,12 @@ function HowItWorksSection() {
             {HOW_IT_WORKS.map((s, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }} style={{ textAlign: 'center' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 18 }}>
-                  <div style={{ width: 44, height: 44, borderRadius: '50%', background: `linear-gradient(135deg, ${G}, #0f6e56)`, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Space Grotesk', fontWeight: 900, fontSize: 14, boxShadow: '0 6px 20px rgba(29,158,117,0.38), 0 0 0 6px #fff', flexShrink: 0, zIndex: 1, position: 'relative' }}>
+                  <div style={{ width: 44, height: 44, borderRadius: '50%', background: `linear-gradient(135deg, ${G}, #0f6e56)`, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Space Grotesk', fontWeight: 900, fontSize: 14, boxShadow: '0 6px 20px rgba(29,158,117,0.38), 0 0 0 6px #0b2018', flexShrink: 0, zIndex: 1, position: 'relative' }}>
                     {s.n}
                   </div>
                   <div>
-                    <h3 style={{ fontWeight: 800, fontSize: 17, color: '#071a12', fontFamily: 'Space Grotesk', marginBottom: 10 }}>{s.title}</h3>
-                    <p style={{ color: '#5a7266', fontSize: 14, lineHeight: 1.85, maxWidth: 220, margin: '0 auto' }}>{s.body}</p>
+                    <h3 style={{ fontWeight: 800, fontSize: 17, color: '#fff', fontFamily: 'Space Grotesk', marginBottom: 10 }}>{s.title}</h3>
+                    <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 14, lineHeight: 1.85, maxWidth: 220, margin: '0 auto' }}>{s.body}</p>
                   </div>
                 </div>
               </motion.div>
@@ -395,9 +395,9 @@ function HowItWorksSection() {
         </div>
 
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: 'center', marginTop: 60 }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 12, background: '#f5fbf8', borderRadius: 100, padding: '14px 28px', border: '1px solid #dcf5ec' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 12, background: 'rgba(29,158,117,0.15)', borderRadius: 100, padding: '14px 28px', border: '1px solid rgba(29,158,117,0.3)' }}>
             <span style={{ fontSize: 18 }}>🎁</span>
-            <span style={{ fontWeight: 700, fontSize: 14, color: '#0a5c45' }}>First session is a free demo class — no commitment required.</span>
+            <span style={{ fontWeight: 700, fontSize: 14, color: '#4ade80' }}>First session is a free demo class — no commitment required.</span>
           </div>
         </motion.div>
       </div>
@@ -505,12 +505,12 @@ function ProjectCard({ project }: { project: typeof STUDENT_PROJECTS[0] }) {
 
 function ProjectsGallery() {
   return (
-    <section style={{ background: '#f5fbf8' }} className="dot-pattern-green">
+    <section style={{ background: '#071a12' }} className="dot-pattern-green">
       <div className="section">
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: 'center', marginBottom: 68 }}>
           <div className="section-label">Student Work</div>
-          <h2 className="display-lg" style={{ color: '#071a12', marginBottom: 16 }}>What Our Students Build</h2>
-          <p style={{ color: '#5a7266', maxWidth: 490, margin: '0 auto', lineHeight: 1.85, fontSize: 16 }}>
+          <h2 className="display-lg" style={{ color: '#fff', marginBottom: 16 }}>What Our Students Build</h2>
+          <p style={{ color: 'rgba(255,255,255,0.82)', maxWidth: 490, margin: '0 auto', lineHeight: 1.85, fontSize: 16 }}>
             Every child leaves CodeSprout with a real project — something they built, own, and can show the world.
           </p>
         </motion.div>
@@ -545,12 +545,12 @@ function TestimonialsSection() {
 // ─── FAQ preview ───────────────────────────────────────────────────────────────
 function FAQPreview() {
   return (
-    <section style={{ background: '#f5fbf8' }}>
+    <section style={{ background: '#0b2018' }}>
       <div className="section">
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: 'center', marginBottom: 56 }}>
           <div className="section-label">Questions</div>
-          <h2 className="display-lg" style={{ color: '#071a12', marginBottom: 16 }}>Common Questions</h2>
-          <p style={{ color: '#5a7266', maxWidth: 440, margin: '0 auto', lineHeight: 1.85, fontSize: 16 }}>
+          <h2 className="display-lg" style={{ color: '#fff', marginBottom: 16 }}>Common Questions</h2>
+          <p style={{ color: 'rgba(255,255,255,0.82)', maxWidth: 440, margin: '0 auto', lineHeight: 1.85, fontSize: 16 }}>
             Everything parents want to know before enrolling.
           </p>
         </motion.div>

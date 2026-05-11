@@ -45,19 +45,19 @@ export default function About() {
       </section>
 
       {/* ── Our Story ── */}
-      <section style={{ background: '#fff' }}>
+      <section style={{ background: '#0b2018' }}>
         <div className="section">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 64, alignItems: 'center' }}>
             <motion.div {...fade()}>
               <div className="section-label">Our Story</div>
-              <h2 className="display-md" style={{ color: '#0f1a14', marginBottom: 20 }}>How CodeSprout Began</h2>
-              <p style={{ color: '#555', lineHeight: 1.85, marginBottom: 18 }}>
+              <h2 className="display-md" style={{ color: '#fff', marginBottom: 20 }}>How CodeSprout Began</h2>
+              <p style={{ color: 'rgba(255,255,255,0.85)', lineHeight: 1.85, marginBottom: 18 }}>
                 In 2023, our founder Amara Okonkwo — a software engineer with 8 years of industry experience — noticed something troubling: there were almost no structured, quality technology education programmes for children in Lagos.
               </p>
-              <p style={{ color: '#555', lineHeight: 1.85, marginBottom: 18 }}>
+              <p style={{ color: 'rgba(255,255,255,0.85)', lineHeight: 1.85, marginBottom: 18 }}>
                 She started CodeSprout Academy in a borrowed co-working space in Victoria Island with just 8 children and a single laptop. Within three months, parents were referring friends. Within six months, we had outgrown the space twice.
               </p>
-              <p style={{ color: '#555', lineHeight: 1.85 }}>
+              <p style={{ color: 'rgba(255,255,255,0.85)', lineHeight: 1.85 }}>
                 Today, CodeSprout Academy is Lagos's most trusted children's coding programme — with over 450 students across three age-matched tracks, a dedicated learning centre, and a team of passionate educators.
               </p>
             </motion.div>
@@ -121,12 +121,12 @@ export default function About() {
       </section>
 
       {/* ── Our Approach ── */}
-      <section id="approach" className="dot-pattern-green" style={{ background: '#f5fbf8' }}>
+      <section id="approach" className="dot-pattern-green" style={{ background: '#0b2018' }}>
         <div className="section">
           <motion.div {...fade()} style={{ textAlign: 'center', marginBottom: 56 }}>
             <div className="section-label" style={{ justifyContent: 'center' }}>Pedagogy</div>
-            <h2 className="display-md" style={{ color: '#0f1a14', marginBottom: 12 }}>Our Approach to Teaching</h2>
-            <p style={{ color: '#555', maxWidth: 520, margin: '0 auto', lineHeight: 1.75 }}>
+            <h2 className="display-md" style={{ color: '#fff', marginBottom: 12 }}>Our Approach to Teaching</h2>
+            <p style={{ color: 'rgba(255,255,255,0.82)', maxWidth: 520, margin: '0 auto', lineHeight: 1.75 }}>
               How we teach is as important as what we teach. Here's what makes CodeSprout different.
             </p>
           </motion.div>

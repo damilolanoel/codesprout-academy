@@ -46,27 +46,27 @@ function PageHero() {
 function ProgrammeDetail({ programme: p, index }: { programme: typeof PROGRAMMES[0]; index: number }) {
   const reverse = index % 2 === 1;
   const sectionBgs = [
-    'linear-gradient(160deg, #f5fbf8 0%, #fff 60%)',
-    'linear-gradient(160deg, #eff6ff 0%, #f8fdfa 60%)',
-    'linear-gradient(160deg, #fffbeb 0%, #fff 60%)',
+    '#0b2018',
+    '#091828',
+    '#1a1008',
   ];
   const sectionBg = sectionBgs[index] ?? '#fff';
 
   return (
     <section id={p.id} style={{ background: sectionBg, position: 'relative', overflow: 'hidden' }}>
       {/* Full-width coloured programme header band */}
-      <div style={{ background: `linear-gradient(135deg, ${p.color}20, ${p.color}0c)`, borderTop: `4px solid ${p.color}`, borderBottom: `1px solid ${p.color}18`, padding: '22px 24px' }}>
+      <div style={{ background: `linear-gradient(135deg, ${p.color}35, ${p.color}20)`, borderTop: `4px solid ${p.color}`, borderBottom: `1px solid ${p.color}40`, padding: '22px 24px' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' as const }}>
           <div style={{ width: 64, height: 64, borderRadius: 18, background: `linear-gradient(135deg, ${p.color}, ${p.color}bb)`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28, flexShrink: 0, boxShadow: `0 8px 24px ${p.color}44` }}>
             {p.emoji}
           </div>
           <div>
             <div style={{ fontSize: 11, color: p.color, fontWeight: 800, textTransform: 'uppercase' as const, letterSpacing: 1.2, marginBottom: 2 }}>Ages {p.ageRange}</div>
-            <h2 style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: 900, fontSize: 'clamp(1.4rem, 2.8vw, 1.9rem)', color: '#0f1a14', margin: 0, letterSpacing: '-0.02em' }}>{p.name}</h2>
+            <h2 style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: 900, fontSize: 'clamp(1.4rem, 2.8vw, 1.9rem)', color: '#fff', margin: 0, letterSpacing: '-0.02em' }}>{p.name}</h2>
           </div>
           <div style={{ marginLeft: 'auto', display: 'flex', gap: 8, flexWrap: 'wrap' as const }}>
             {[`🛠 ${p.tool}`, `⏱ ${p.duration}`, `📅 ${p.sessionsPerWeek}`].map(tag => (
-              <span key={tag} style={{ background: p.color + '14', color: p.color, fontSize: 12, padding: '6px 14px', borderRadius: 100, fontWeight: 700, border: `1px solid ${p.color}22`, whiteSpace: 'nowrap' as const }}>
+              <span key={tag} style={{ background: p.color + '35', color: '#fff', fontSize: 12, padding: '6px 14px', borderRadius: 100, fontWeight: 700, border: `1px solid ${p.color}55`, whiteSpace: 'nowrap' as const }}>
                 {tag}
               </span>
             ))}
@@ -78,21 +78,21 @@ function ProgrammeDetail({ programme: p, index }: { programme: typeof PROGRAMMES
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 56, alignItems: 'start' }}>
           {/* Info column */}
           <motion.div initial={{ opacity: 0, x: reverse ? 24 : -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <p style={{ color: '#777', fontStyle: 'italic', fontSize: 15, marginBottom: 20 }}>{p.tagline}</p>
-            <p style={{ color: '#555', lineHeight: 1.8, marginBottom: 28 }}>{p.overview}</p>
+            <p style={{ color: 'rgba(255,255,255,0.75)', fontStyle: 'italic', fontSize: 15, marginBottom: 20 }}>{p.tagline}</p>
+            <p style={{ color: 'rgba(255,255,255,0.85)', lineHeight: 1.8, marginBottom: 28 }}>{p.overview}</p>
 
             {/* Final project callout */}
-            <div style={{ background: p.color + '0d', border: `1px solid ${p.color}28`, borderRadius: 14, padding: '20px 22px', marginBottom: 28 }}>
+            <div style={{ background: p.color + '25', border: `1px solid ${p.color}50`, borderRadius: 14, padding: '20px 22px', marginBottom: 28 }}>
               <div style={{ fontWeight: 700, color: p.color, fontSize: 13, textTransform: 'uppercase' as const, letterSpacing: 0.5, marginBottom: 10 }}>🎓 Final Project</div>
-              <p style={{ color: '#444', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{p.finalProject}</p>
+              <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{p.finalProject}</p>
             </div>
 
             {/* Price + CTA — colourful gradient box */}
-            <div style={{ background: `linear-gradient(135deg, ${p.color}1c, ${p.color}08)`, borderRadius: 18, padding: '22px 26px', border: `1px solid ${p.color}28`, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' as const }}>
+            <div style={{ background: `linear-gradient(135deg, ${p.color}30, ${p.color}18)`, borderRadius: 18, padding: '22px 26px', border: `1px solid ${p.color}45`, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' as const }}>
               <div>
                 <div style={{ fontSize: 11, color: p.color, fontWeight: 700, textTransform: 'uppercase' as const, letterSpacing: 0.5, marginBottom: 4 }}>Tuition Fee</div>
                 <div style={{ fontSize: 28, fontWeight: 900, color: p.color, fontFamily: 'Space Grotesk, sans-serif', lineHeight: 1 }}>
-                  {p.price} <span style={{ fontSize: 13, fontWeight: 600, color: '#aaa' }}>{p.priceNote}</span>
+                  {p.price} <span style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.6)' }}>{p.priceNote}</span>
                 </div>
               </div>
               <Link
@@ -106,7 +106,7 @@ function ProgrammeDetail({ programme: p, index }: { programme: typeof PROGRAMMES
 
           {/* What they learn */}
           <motion.div initial={{ opacity: 0, x: reverse ? -24 : 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <h3 style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: 800, fontSize: 18, color: '#0f1a14', marginBottom: 22 }}>
+            <h3 style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: 800, fontSize: 18, color: '#fff', marginBottom: 22 }}>
               What {p.name.split(' ').pop()} Learn
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -115,7 +115,7 @@ function ProgrammeDetail({ programme: p, index }: { programme: typeof PROGRAMMES
                   <div style={{ width: 28, height: 28, borderRadius: '50%', background: `linear-gradient(135deg, ${p.color}, ${p.color}bb)`, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: 12, fontWeight: 900, marginTop: 2, boxShadow: `0 4px 12px ${p.color}38` }}>
                     ✓
                   </div>
-                  <p style={{ margin: 0, color: '#444', fontSize: 15, lineHeight: 1.65 }}>{item}</p>
+                  <p style={{ margin: 0, color: 'rgba(255,255,255,0.88)', fontSize: 15, lineHeight: 1.65 }}>{item}</p>
                 </motion.div>
               ))}
             </div>
