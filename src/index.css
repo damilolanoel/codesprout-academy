@@ -261,15 +261,8 @@ h1, h2, h3, h4 {
   background-size: 48px 48px;
 }
 .dot-pattern-green {
-  background-image: radial-gradient(rgba(29,158,117,0.22) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(29,158,117,0.14) 1.5px, transparent 1.5px);
   background-size: 24px 24px;
-}
-.cross-pattern {
-  background-image:
-    linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px),
-    radial-gradient(rgba(255,255,255,0.12) 1.5px, transparent 1.5px);
-  background-size: 48px 48px, 48px 48px, 24px 24px;
 }
 
 /* ── Glass ─────────────────────────────────────────────────────────────────── */

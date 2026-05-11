@@ -186,36 +186,36 @@ function HeroSection() {
 // ─── Why CodeSprout ────────────────────────────────────────────────────────────
 function WhySection() {
   const nums = ['01', '02', '03', '04'];
-  const iconColors = [COLORS.brand, COLORS.builders, COLORS.innovators, '#8B5CF6'];
   return (
-    <section className="dark-gradient cross-pattern" style={{ position: 'relative', overflow: 'hidden' }}>
-      <div style={{ position: 'absolute', top: '5%', right: '-5%', width: 500, height: 500, background: 'radial-gradient(circle, rgba(29,158,117,0.18) 0%, transparent 65%)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', bottom: '-10%', left: '-5%', width: 420, height: 420, background: 'radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 65%)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', top: '45%', left: '40%', width: 320, height: 320, background: 'radial-gradient(circle, rgba(217,119,6,0.08) 0%, transparent 65%)', pointerEvents: 'none' }} />
+    <section className="dot-pattern" style={{ background: 'linear-gradient(135deg, #0a5740 0%, #0f6e56 40%, #1D9E75 80%, #22b07d 100%)', position: 'relative', overflow: 'hidden' }}>
+      {/* Two monochrome glows — no competing colors */}
+      <div style={{ position: 'absolute', top: '-10%', right: '-6%', width: 480, height: 480, background: 'radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 60%)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', bottom: '-15%', left: '-4%', width: 360, height: 360, background: 'radial-gradient(circle, rgba(0,0,0,0.18) 0%, transparent 60%)', pointerEvents: 'none' }} />
       <div className="section" style={{ position: 'relative' }}>
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: 'center', marginBottom: 68 }}>
-          <div className="section-label" style={{ justifyContent: 'center', color: '#4ade80' }}>Why Us</div>
+          <div className="section-label" style={{ justifyContent: 'center', color: 'rgba(255,255,255,0.7)' }}>Why Us</div>
           <h2 className="display-lg" style={{ color: '#fff', marginBottom: 16 }}>Why CodeSprout?</h2>
-          <p style={{ color: 'rgba(255,255,255,0.65)', maxWidth: 520, margin: '0 auto', lineHeight: 1.85, fontSize: 16 }}>
+          <p style={{ color: 'rgba(255,255,255,0.82)', maxWidth: 520, margin: '0 auto', lineHeight: 1.85, fontSize: 16 }}>
             We don't just teach coding. We build confident, creative problem-solvers ready for a digital Africa.
           </p>
         </motion.div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
           {WHY_CARDS.map((c, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="glass" style={{ padding: 36 }}>
+            <motion.div key={i} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+              style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.22)', borderRadius: 22, padding: 36, backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 22 }}>
-                <div style={{ width: 58, height: 58, background: `linear-gradient(135deg, ${iconColors[i]}50, ${iconColors[i]}22)`, border: `1px solid ${iconColors[i]}44`, borderRadius: 18, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28 }}>
+                <div style={{ width: 58, height: 58, background: 'rgba(255,255,255,0.18)', border: '1px solid rgba(255,255,255,0.25)', borderRadius: 18, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28 }}>
                   {c.icon}
                 </div>
-                <span style={{ fontSize: 52, fontWeight: 900, color: 'rgba(255,255,255,0.07)', fontFamily: 'Space Grotesk, sans-serif', lineHeight: 1, userSelect: 'none' }}>
+                <span style={{ fontSize: 52, fontWeight: 900, color: 'rgba(255,255,255,0.12)', fontFamily: 'Space Grotesk, sans-serif', lineHeight: 1, userSelect: 'none' }}>
                   {nums[i]}
                 </span>
               </div>
               <h3 style={{ fontWeight: 800, fontSize: 17, color: '#fff', marginBottom: 10, fontFamily: 'Space Grotesk, sans-serif' }}>
                 {c.title}
               </h3>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 14, lineHeight: 1.85, margin: 0 }}>{c.body}</p>
+              <p style={{ color: 'rgba(255,255,255,0.88)', fontSize: 14, lineHeight: 1.85, margin: 0 }}>{c.body}</p>
             </motion.div>
           ))}
         </div>
@@ -363,7 +363,7 @@ function CampBanner() {
 // ─── How It Works ──────────────────────────────────────────────────────────────
 function HowItWorksSection() {
   return (
-    <section style={{ background: 'linear-gradient(160deg, #f0fdf8 0%, #fff 55%, #f0f4ff 100%)' }} className="dot-pattern-green">
+    <section style={{ background: 'linear-gradient(180deg, #fff 0%, #f0fdf8 100%)' }} className="dot-pattern-green">
       <div className="section">
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: 'center', marginBottom: 68 }}>
           <div className="section-label">Process</div>

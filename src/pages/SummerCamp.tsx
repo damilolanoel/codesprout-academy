@@ -142,7 +142,7 @@ export default function SummerCamp() {
       </section>
 
       {/* ── Who is it for? ── */}
-      <section className="dot-pattern-green" style={{ background: 'linear-gradient(160deg, #f5fbf8 0%, #fff 50%, #f0f4ff 100%)' }}>
+      <section style={{ background: '#fff' }}>
         <div className="section">
           <motion.div {...fade()} style={{ textAlign: 'center', marginBottom: 52 }}>
             <span className="pill" style={{ marginBottom: 16, display: 'inline-flex' }}>Who It's For</span>
